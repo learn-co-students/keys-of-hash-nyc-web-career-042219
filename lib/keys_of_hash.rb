@@ -1,5 +1,6 @@
+require "pry"
 class Hash
-  def keys_of(arguments)
-    # code goes here
+  def keys_of(*args)
+    map {|k,v| args.include?(v) ? k : nil}.compact
   end
 end
